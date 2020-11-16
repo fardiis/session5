@@ -1,0 +1,242 @@
+﻿@model Demo.Models.UserViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .navbar {
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            background-color: #302896 !important;
+        }
+
+        #header {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        #OpenUpForm {
+            border-radius: 15px;
+            border-radius: 15px;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Session Five</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <a class="btn btn-primary btn-lg btn-action btn-circle " href="~/Home/Index" role="button"><i class="fa fa-home fa-2x"></i>🏠</a>
+
+
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+
+
+
+                    <form class="form-inline" asp-action="index">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="form-group">
+                            <div class="form-group">
+                                
+                                <label asp-for="Name" class="control-label"></label>
+                                <input asp-for="Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Surname" class="control-label"></label>
+                                <input asp-for="Surname" class="form-control" />
+                                <span asp-validation-for="Surname" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                <div class="form-group">
+                    <div class="form-group">
+                        <label asp-for="Phone" class="control-label"></label>
+                        <input asp-for="Phone" class="form-control" />
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label asp-for="Mobile" class="control-label"></label>
+                        <input asp-for="Mobile" class="form-control" />
+                        <span asp-validation-for="Mobile" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        <label asp-for="codeMeli" class="control-label"></label>
+                        <input asp-for="codeMeli" class="form-control" />
+                        <span asp-validation-for="codeMeli" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CodePosti" class="control-label"></label>
+                        <input asp-for="CodePosti" class="form-control" />
+                        <span asp-validation-for="CodePosti" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ShomareShenasname" class="control-label"></label>
+                        <input asp-for="ShomareShenasname" class="form-control" />
+                        <span asp-validation-for="ShomareShenasname" class="text-danger"></span>
+                    </div>
+                </div>
+    </form>
+    <form asp-action="Index">
+        <div class="form-group">
+            <label asp-for="Address" class="control-label"></label>
+            @*<input asp-for="Address" class="form-control" />*@
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+    </form>
+    <form asp-action="Index">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xl-12">
+                    <span>وضعیت:</span>
+
+                    <input asp-for="Status"  type="radio" data-toggle="collapse" data-target="#collapseone" value="حقوقی" />حقوقی
+                    <input asp-for="Status" type="radio" data-toggle="collapse" data-target="#collapsetwo" value="حقیقی" />حقیقی
+                    <div class="panel-group" id="SelectedStatus">
+                        <div class="panel panel-default">
+                            <div id="collapseone" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <label asp-for="CompanyName" class="control-label"></label>
+                                    <input asp-for="CompanyName" class="form-control" />
+
+                                    <label asp-for="CopanyCode" class="control-label"></label>
+                                    <input asp-for="CopanyCode" class="form-control" />
+
+                                    <label asp-for="EconomyCode" class="control-label"></label>
+                                    <input asp-for="EconomyCode" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </form>
+
+
+
+    @*<div class="form-group">
+            <label asp-for="SelectedStatus" class="radio-inline" data-toggle="collapse" href="#collapse1">
+                <label class="radio-inline">
+                    <input type="radio" name="optradio">حقوقی
+
+                    <input type="radio" name="optradio" checked>حقیقی
+
+
+                </label>
+            </label>
+        </div>*@
+
+
+
+    @*<div class="form-group">
+            <label asp-for="CompanyName" class="control-label"></label>
+            <input asp-for="CompanyName" class="form-control" />
+            <span asp-validation-for="CompanyName" class="text-danger"></span>
+        </div>*@
+    @*<div class="form-group">
+            <label asp-for="CopanyCode" class="control-label"></label>
+            <input asp-for="CopanyCode" class="form-control" />
+            <span asp-validation-for="CopanyCode" class="text-danger"></span>
+        </div>*@
+    @*<div class="form-group">
+            <label asp-for="EconomyCode" class="control-label"></label>
+            <input asp-for="EconomyCode" class="form-control" />
+            <span asp-validation-for="EconomyCode" class="text-danger"></span>
+        </div>*@
+    <div class="container">
+        <h2>نحوه اشنایی</h2>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse1">نحوه اشنایی</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">معرفی دوستان</a>
+                        <a href="#" class="list-group-item">تبلیغات</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>پنل کاربری</h2>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        
+                        <a data-toggle="collapse" href="#collapse2">پنل کاربری</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">طلایی</a>
+                        <a href="#" class="list-group-item">نقره ای</a>
+                        <a href="#" class="list-group-item">برنزی</a>
+                    </div>
+
+                </div>
+                <div class="form-group text-center">
+                    <img id="captcha" class="tooltipBar" src="http://panel.simorghsms.com/captcha.png" onclick="refreshCaptcha()" title="" data-original-title="Click for refresh!">
+                    <input type="text" class="form-control" id="reg_captcha" placeholder="Picture letters" tabindex="18" asp-for="CaptchaCode" maxlength="6">
+                    <span asp-validation-for="CaptchaCode" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>>
+
+
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+    </div>
+
+
+
+
+</body>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

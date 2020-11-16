@@ -1,0 +1,9 @@
+D:\Mvc\Register\Demo.DAL\bin\Debug\netstandard2.0\Demo.DAL.deps.json
+D:\Mvc\Register\Demo.DAL\bin\Debug\netstandard2.0\Demo.DAL.dll
+D:\Mvc\Register\Demo.DAL\obj\Debug\netstandard2.0\Demo.DAL.csprojAssemblyReference.cache
+D:\Mvc\Register\Demo.DAL\obj\Debug\netstandard2.0\Demo.DAL.AssemblyInfoInputs.cache
+D:\Mvc\Register\Demo.DAL\obj\Debug\netstandard2.0\Demo.DAL.AssemblyInfo.cs
+D:\Mvc\Register\Demo.DAL\bin\Debug\netstandard2.0\Demo.DAL.pdb
+D:\Mvc\Register\Demo.DAL\obj\Debug\netstandard2.0\Demo.DAL.csproj.CoreCompileInputs.cache
+D:\Mvc\Register\Demo.DAL\obj\Debug\netstandard2.0\Demo.DAL.dll
+D:\Mvc\Register\Demo.DAL\obj\Debug\netstandard2.0\Demo.DAL.pdb
